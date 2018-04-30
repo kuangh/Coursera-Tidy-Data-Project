@@ -42,8 +42,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ## Here's the code book:
 Features	Units
 
-activity	
-
+activity
 subject	
 
 tBodyAcc-mean()-X	g

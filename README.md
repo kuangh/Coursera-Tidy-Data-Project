@@ -26,11 +26,13 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ## 1.5. From the data set in step 1.4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 -add a subject ID column to the tidy data table using data extracted from "subject_train.txt" and "subject_test.txt" and name the new data table "tidy2"
+
 -calculate the mean for each variable and group by activity and subject ID using lapply on the data table
+
 -write out "tidy2" usign using the fread function
 
 # 2. Code book
-## to generate the code book
+## 2.1 Generate the code book
 -store the column names of the "tidy2" data table in a data table called "tidy2.features" and name the column "Features"
 
 -add a "Units" column to "tidy2.features" using the sub function: all Acc variables have units of g; all Gyro variables have units of radians/second
@@ -39,8 +41,11 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ## Here's the code book:
 Features	Units
+
 activity	
+
 subject	
+
 tBodyAcc-mean()-X	g
 tBodyAcc-mean()-Y	g
 tBodyAcc-mean()-Z	g

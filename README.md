@@ -1,30 +1,36 @@
 # Coursera-Tidy-Data-Project
 this is a course project for "Getting and Cleaning Data" on Coursera
 
-1. The R code
+# 1. The R code
 The R code combines the training and testing data sets from the "Human Activity Recognition Project":
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-# to combine the train and test data sets
--It first reads in the training data contained in "X_train.txt" to a data table called "train" and testing data contained in "X_test.txt" to a data table called "test". 
+
+## 1. Combine the train and test data sets
+-Reads in the training data contained in "X_train.txt" to a data table called "train" and testing data contained in "X_test.txt" to a data table called "test". 
 
 -The two data tables each contains 561 columns correspondign to 561 features calcuated by the original authors based on raw data. The names of these 561 columsn are extracted from file "features.txt" and assgined to the two data tables as headers.
+
+-The two data tables are combined by rows into a new data table called "all".
+
+## 2. Extract the mean and standard deviation data for each measurement
+-get the column indexes that contain the strings "mean" or "std" anywhere in the column headers, then subset the "all" data table using those indexes and store the subset into a data table called "tidy"
+
+# 3. Use descriptive activity names to name the activities in the data set
+-
+
+# to write out the tidy data
+-using the write.table() function to write out "tidy" into a file named "tidy.txt"
+
 
 -Then a new column called "activity.class" is added to each data table that indicates the activity class for each row of data. The activity class data are extracted from files called "y_train.txt" and "y_text.txt". 
 
 -Another new column called "activity" is added to each data table to translate the activity class (1-6) into the activity name. 
 
--Then another new column called "subject" is added to each data table to indicate the IDs of the individuales who took the measurements. The subject IDs are extracted from the "subject_test.txt" files.
+-Then another new column called "subject" is added to each data table to indicate the IDs of the individuales who took the measurements. The subject IDs are extracted from files called "subject_train.txt" and "subject_test.txt".
 
--Finally, the two data tables are combined by rows into a new data table called "all".
 
-# to extract the mean and standard deviation data for each measurement
--get the column indexes that contain the strings "mean" anywhere in the column headers, "std" anywhere in the column headers, and "activity" and the end of the headers, then subset the "all" data table using those indexes
 
--get the column indexes that contain the string "mean", then subset the "all" data table using those indexes and store it in a data table called "tidy"
-
-# to write out the tidy data
--using the write.table() function to write out "tidy" into a file named "tidy.txt"
 
 2. Code book
 # to generate the code book
